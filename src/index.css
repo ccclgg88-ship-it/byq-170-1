@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-bg: #fff5f7;
+  --theme-bg-from: #fff5f7;
+  --theme-bg-to: #f0fdf4;
+  --theme-text-primary: #2d3748;
+  --theme-text-secondary: #718096;
+  --theme-accent: #f687b3;
+  --theme-accent-secondary: #68d391;
+  --theme-tag-bg: rgba(246, 135, 179, 0.2);
+  --theme-tag-text: #d53f8c;
+  --theme-border: rgba(246, 135, 179, 0.3);
+  --theme-shadow: rgba(246, 135, 179, 0.25);
+  --theme-font-title: 'Quicksand', system-ui, sans-serif;
+  --theme-font-body: 'Quicksand', system-ui, -apple-system, sans-serif;
+  --theme-radius-card: 24px;
+  --theme-radius-tag: 16px;
+  --theme-radius-button: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
