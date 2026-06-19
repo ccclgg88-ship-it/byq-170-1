@@ -27,8 +27,8 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({
           key={themeKey}
           onClick={() => onThemeChange(themeKey)}
           className={`
-            flex items-center gap-1.5 px-3 py-2 text-sm font-medium
-            transition-all duration-300 ease-out
+            inline-flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium
+            transition-all duration-300 ease-out text-center align-middle
             ${currentTheme === themeKey
               ? 'scale-105'
               : 'opacity-70 hover:opacity-100'
@@ -45,11 +45,14 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({
             border: currentTheme === themeKey
               ? '1px solid var(--theme-border)'
               : '1px solid transparent',
+            lineHeight: '1',
           }}
           title={themes[themeKey].name}
         >
-          {themeIcons[themeKey]}
-          <span className="hidden sm:inline">{themes[themeKey].name}</span>
+          <span className="shrink-0 inline-flex items-center justify-center">
+            {themeIcons[themeKey]}
+          </span>
+          <span className="hidden sm:inline-block align-middle leading-none">{themes[themeKey].name}</span>
         </button>
       ))}
     </div>
